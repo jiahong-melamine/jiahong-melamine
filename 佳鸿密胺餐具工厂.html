@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佳鸿密胺餐具工厂 | 密胺餐具定制与出口</title>
+    <style>/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f8f9fb;
+}
+
+a {
+    color: #1b3a5c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 头部导航 - 重点修复部分 */
+header {
+    background: #1b3a5c;
+    color: #fff;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 头部导航中的 Logo 样式 */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 45px; /* 限制 Logo 高度，保持导航栏整洁 */
+    width: auto;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+header nav a {
+    font-size: 15px;
+    color: #f8f8f8; /* 导航文字改为浅灰色 */
+}
+
+header nav a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* 首屏 - 深青底白字 */
+.hero {
+    background: #1b3a5c;
+    color: #fff;
+    text-align: center;
+    padding: 60px 24px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 16px;
+    max-width: 720px;
+    margin: 0 auto 24px;
+    color: #e8ecf1;
+}
+
+.btn {
+    display: inline-block;
+    background: #fff;
+    color: #1b3a5c;
+    padding: 10px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #d9e2ec;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background: #fff;
+    color: #1b3a5c;
+    padding: 10px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #e9eef5;
+    text-decoration: none;
+}
+
+/* 通用区块 */
+section {
+    padding: 50px 24px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #1b3a5c;
+}
+
+section p {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+/* 关于我们 */
+.about {
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 32px;
+    padding: 40px 32px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* 产品系列 - 重点修复高度一致 */
+.products {
+    margin-top: 24px;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product > div {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.product img {
+    width: 100%;
+    height: 220px; /* 强制统一图片高度 */
+    object-fit: cover; /* 自动裁剪多余的边，保持美观 */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.product h3 {
+    font-size: 17px;
+    padding: 16px 16px 6px;
+    color: #1b3a5c;
+}
+
+.product p {
+    padding: 0 16px 20px;
+    font-size: 14px;
+    flex-grow: 1; /* 让文本区域自动填满 */
+}
+
+/* 定制服务 */
+.custom {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    margin-top: 24px;
+}
+
+.custom img {
+    width: 40%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.custom .info h2 {
+    margin-bottom: 10px;
+}
+
+.custom .info p {
+    font-size: 15px;
+}
+
+/* 工厂实力 */
+.factory {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    background: #fcfbfb;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    margin-top: 24px;
+    padding: 40px;
+}
+
+.factory h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.factory img {
+    width: 40%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.factory .info {
+    flex: 1;
+}
+
+.factory .info p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+ .inquiry {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    margin-top: 24px;
+}
+
+.inquiry form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+.inquiry input,
+.inquiry textarea {
+    padding: 12px 16px;
+    border: 1px solid #d7dce5;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.inquiry textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.inquiry button {
+    align-self: flex-start;
+    background: #1b3a5c;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.inquiry button:hover {
+    background: #142d48;
+}
+
+/* 页脚 */
+footer {
+    background: #1b3a5c;
+    color: #d9e2ec;
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 50px;
+}
+
+footer p {
+    margin-bottom: 6px;
+}
+
+footer a {
+    color: #fff;
+}
+
+/* 手机端响应式 */
+@media (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .product {
+        grid-template-columns: 1fr;
+    }
+
+    .custom {
+        flex-direction: column;
+    }
+
+    .custom img {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <button class="menu">&#9776;</button>
+        <h1>佳鸿密胺餐具</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#products">产品中心</a></li>
+                <li><a href="#custom">定制服务</a></li>
+                <li><a href="#factory">工厂实力</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 首屏介绍 -->
+        <section class="hero">
+            <h2>专业密胺餐具工厂 · 支持OEM/ODM定制</h2>
+            <p>专注密胺餐具研发、设计与制造，产品覆盖餐饮、酒店、商超、儿童餐具等领域</p>
+            <a href="#contact" class="btn">立即询价</a>
+        </section>
+
+        <!-- 关于我们 -->
+        <section class="about" id="about">
+            <h2>关于我们</h2>
+            <p>佳鸿塑料制品厂创立于2009年，长期深耕密胺餐具行业，现已发展成为专业从事高端密胺产品研发、设计与制造的创新型企业。</p>
+            <p>我们以国际化的设计理念与稳定的制造工艺，为餐饮连锁、酒店、商超、外贸客户提供密胺餐具及厨房用品解决方案。</p>
+            <p><a href="#contact">了解更多</a></p>
+        </section>
+
+        <!-- 产品系列 -->
+        <section class="products" id="products">
+            <h2>产品系列</h2>
+            <div class="product">
+                <div>
+                    <img src="images/儿童餐具.jpg" alt="儿童餐具">
+                    <h3>儿童餐具</h3>
+                    <p>色彩丰富、造型可爱，适合家庭、幼教及儿童餐饮场景</p>
+                </div>
+                <div>
+                    <img src="images/商用餐具.jpg" alt="商用餐具">
+                    <h3>商用餐具</h3>
+                    <p>耐用、轻便、不易破碎，适用于餐饮、食堂、酒店等场景</p>
+                </div>
+                <div>
+                    <img src="images/密胺餐具.jpg" alt="密胺餐具">
+                    <h3>密胺餐具</h3>
+                    <p>款式多样，支持颜色、花面、尺寸及包装定制</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 定制服务 -->
+        <section class="custom" id="custom">
+            <img src="images/定制服务.webp" alt="密胺餐具定制服务">
+            <div class="info">
+                <h2>定制服务</h2>
+                <p>支持颜色、花面、Logo、包装、尺寸及模具开发，提供OEM/ODM定制服务。</p>
+                <p>欢迎提供样品或设计图，我们将根据需求提供打样与报价。</p>
+            </div>
+        </section>
+
+        <!-- 工厂实力与资质 -->
+        <section class="factory" id="factory">
+            <h2>工厂实力</h2>
+            <img src="images/合作品牌.jpg" alt="工厂实力">
+            <div class="info">
+                <p>自有工厂生产，具备密胺餐具成型、打磨、印花、质检与包装能力。</p>
+                <p>产品符合相关食品接触材料要求，支持提供检测报告与认证资料。</p>
+                <p>主要服务餐饮连锁、酒店、商超、外贸客户及电商卖家。</p>
+            </div>
+        </section>
+
+        <!-- 在线询价 -->
+        <section class="inquiry" id="contact">
+            <h2>在线询价</h2>
+            <p>如有咨询、定制或订购需求，请填写以下信息，我们会尽快与您联系。</p>
+            <form>
+                <input type="text" placeholder="您的姓名" required>
+                <input type="text" placeholder="公司名称">
+                <input type="email" placeholder="邮箱 / WhatsApp / 微信" required>
+                <textarea placeholder="请描述采购品类、数量、用途或定制需求"></textarea>
+                <button type="submit">提交询价</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2026 佳鸿塑料制品厂 All Rights Reserved.</p>
+        <p>电话 / WhatsApp：+86 159 9666 9408</p>
+        <p>邮箱：info@jiahong-melamine.com</p>
+        <p>地址：中国 · 浙江省</p>
+    </footer>
+</body>
+</html>
