@@ -428,12 +428,24 @@ footer a {
         <section class="inquiry" id="contact">
             <h2>在线询价</h2>
             <p>如有咨询、定制或订购需求，请填写以下信息，我们会尽快与您联系。</p>
-            <form>
-                <input type="text" placeholder="您的姓名" required>
-                <input type="text" placeholder="公司名称">
-                <input type="email" placeholder="邮箱 / WhatsApp / 微信" required>
-                <textarea placeholder="请描述采购品类、数量、用途或定制需求"></textarea>
-                <button type="submit">提交询价</button>
+            <!-- 在线询价表单 -->
+            <form action="https://formsubmit.co/1049470850@qq.com" method="POST" style="padding: 0 16px 24px;">
+    
+            <!-- 防垃圾邮件隐藏字段（直接复制即可） -->
+            <input type="text" name="_honey" style="display:none">
+            <!-- 提交成功后显示的提示（可选，删掉这行会用默认页面） -->
+            <input type="hidden" name="_next" value="https://formsubmit.co/el/thanks">
+
+            <div style="margin-bottom: 12px;">
+            <input type="text" name="name" placeholder="您的姓名" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 12px;">
+            <input type="email" name="email" placeholder="联系邮箱" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 12px;">
+            <textarea name="message" rows="4" placeholder="询价内容（例如：需要订购儿童餐具 ZF004-01，数量500套）" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"></textarea>
+            </div>
+            <button type="submit" style="width: 100%; background: #1b3a5c; color: #fff; padding: 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">提交询价</button>
             </form>
         </section>
     </main>
