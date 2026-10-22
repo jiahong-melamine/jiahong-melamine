@@ -221,9 +221,10 @@ section p {
     padding: 40px;
 }
 .factory img {
-    width: 40%;
+    width: 380px; /* 电脑端固定宽度，不要按比例缩放 */
+    height: 300px; /* 电脑端固定高度，让右边文字对齐更美观 */
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain; /* 使用 contain 保证Logo完整显示，不会被裁切 */
 }
 .factory .info h2 {
     margin-bottom: 10px;
