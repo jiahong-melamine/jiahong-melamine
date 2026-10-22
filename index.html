@@ -209,29 +209,22 @@ section p {
     font-size: 15px;
 }
 
-/* 工厂实力 (修改后) */
+/* 工厂实力 */
 .factory {
     display: flex;
     gap: 32px;
-    align-items: center;
+    align-items: flex-start;
     background: #fcfbfb;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     margin-top: 24px;
     padding: 40px;
 }
-/* 让图片和文字在顶部对齐，防止图片被顶到中间 */
-.factory {
-    display: flex;
-    gap: 32px;
-    align-items: flex-start; /* 这里从 center 改成 flex-start */
-    background: #fcfbfb;
+.factory img {
+    width: 40%;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-    margin-top: 24px;
-    padding: 40px;
+    object-fit: cover;
 }
-/* 新增这段，让标题和文字排版一致 */
 .factory .info h2 {
     margin-bottom: 10px;
 }
